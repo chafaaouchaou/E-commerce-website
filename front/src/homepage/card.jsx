@@ -29,7 +29,7 @@ const CustomCard = ({ imageUrl, title, description, price, id }) => {
   const isProductInWishlist = async (productId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://127.0.0.1:8000/wishlists/check/${productId}/`, {
+      const response = await axios.get(`https://ecomapi.chafaaouchaou.online//wishlists/check/${productId}/`, {
         headers: {
           'Authorization': `Token ${token}`,
         },
@@ -57,7 +57,7 @@ const CustomCard = ({ imageUrl, title, description, price, id }) => {
         "quantity": 1
       };
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://127.0.0.1:8000/cart-items/', data, {
+      const response = await axios.post('https://ecomapi.chafaaouchaou.online//cart-items/', data, {
         headers: {
           'Authorization': `Token ${token}`
         }
@@ -78,7 +78,7 @@ const CustomCard = ({ imageUrl, title, description, price, id }) => {
   const addToWishlist = async (productId) => {
     try {
       setIsAnimating(true);
-      const response = await axios.post(`http://127.0.0.1:8000/wishlist/`, {
+      const response = await axios.post(`https://ecomapi.chafaaouchaou.online//wishlist/`, {
         product_id: productId,
       },
         {
@@ -113,7 +113,7 @@ const CustomCard = ({ imageUrl, title, description, price, id }) => {
   const removeFromWishlist = async (productId) => {
     try {
       setIsAnimating(true);
-      const response = await axios.delete(`http://127.0.0.1:8000/wishlist/?product_id=${productId}`,
+      const response = await axios.delete(`https://ecomapi.chafaaouchaou.online//wishlist/?product_id=${productId}`,
         {
           headers: {
             'Authorization': `Token ${localStorage.getItem('token')}`,

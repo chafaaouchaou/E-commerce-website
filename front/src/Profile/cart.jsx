@@ -18,7 +18,7 @@ const Cart = ({ id, imageUrl, title, description, savings, price }) => {
           };
           const token = localStorage.getItem('token'); // Get auth token from storage
           console.log('Token:', token); // Print the token
-          const response = await axios.post('http://127.0.0.1:8000/cart-items/', data, {
+          const response = await axios.post('https://ecomapi.chafaaouchaou.online//cart-items/', data, {
             headers: {
               'Authorization': `Token ${token}` // Ensure requests are authenticated
             }

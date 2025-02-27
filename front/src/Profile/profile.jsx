@@ -61,7 +61,7 @@ const addToCart = async (productId,title,toast) => {
       "quantity": 1
     };
     const token = localStorage.getItem('token');
-    const response = await axios.post('http://127.0.0.1:8000/cart-items/', data, {
+    const response = await axios.post('https://ecomapi.chafaaouchaou.online//cart-items/', data, {
       headers: {
         'Authorization': `Token ${token}`
       }
@@ -82,7 +82,7 @@ const addToCart = async (productId,title,toast) => {
 
 const removeFromWishlist = async (productId,toast,wishlist,setWishlist) => {
   try {
-    const response = await axios.delete(`http://127.0.0.1:8000/wishlist/?product_id=${productId}`,
+    const response = await axios.delete(`https://ecomapi.chafaaouchaou.online//wishlist/?product_id=${productId}`,
       {
         headers: {
           'Authorization': `Token ${localStorage.getItem('token')}`,
@@ -101,7 +101,7 @@ const removeFromWishlist = async (productId,toast,wishlist,setWishlist) => {
     });
     // console.log(wishlist);
     try {
-      const wishlistResponse = await axios.get(`http://127.0.0.1:8000/wishlist/`, { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } })
+      const wishlistResponse = await axios.get(`https://ecomapi.chafaaouchaou.online//wishlist/`, { headers: { 'Authorization': `Token ${localStorage.getItem('token')}` } })
       setWishlist(wishlistResponse.data[0]);
     } catch (error) {
       console.log(error.response.data.message);
@@ -208,9 +208,9 @@ const Profile = () => {
     const fetchData = async () => {
       try {
         const [userResponse, wishlistResponse, ordersResponse] = await Promise.all([
-          axios.get(`http://127.0.0.1:8000/users/${userId}`, { headers: { 'Authorization': `Token ${token}` } }),
-          axios.get(`http://127.0.0.1:8000/wishlist/`, { headers: { 'Authorization': `Token ${token}` } }),
-          axios.get(`http://127.0.0.1:8000/orders/`, { headers: { 'Authorization': `Token ${token}` } })
+          axios.get(`https://ecomapi.chafaaouchaou.online//users/${userId}`, { headers: { 'Authorization': `Token ${token}` } }),
+          axios.get(`https://ecomapi.chafaaouchaou.online//wishlist/`, { headers: { 'Authorization': `Token ${token}` } }),
+          axios.get(`https://ecomapi.chafaaouchaou.online//orders/`, { headers: { 'Authorization': `Token ${token}` } })
         ]);
         setUser(userResponse.data[0]);
         setWishlist(wishlistResponse.data[0]);

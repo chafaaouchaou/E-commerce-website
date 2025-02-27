@@ -29,7 +29,7 @@ This is a full-stack e-commerce website built using Django and React. The backen
    * Activate the virtual environment: `source venv/bin/activate` (Windows: `venv\Scripts\activate`)
    * Install required dependencies: `pip install -r ecom/requirements.txt`
    * Apply database migrations (create tables): `python manage.py makemigrations` followed by `python manage.py migrate`
-   * Run the development server: `python manage.py runserver` (This will typically start the server at http://127.0.0.1:8000/)
+   * Run the development server: `python manage.py runserver` (This will typically start the server at https://ecomapi.chafaaouchaou.online//)
 
 2. **Frontend (React):**
    * Open a separate terminal/command prompt.

@@ -32,7 +32,7 @@ const Homepage = () => {
     const text = event.target.value;
     setSearchText(text);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/search/', { Text: text });
+      const response = await axios.post('https://ecomapi.chafaaouchaou.online//search/', { Text: text });
       setProducts(response.data);
       console.log(response.data); // Print the response data
       setProducts(response.data);
@@ -44,7 +44,7 @@ const Homepage = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/products/');
+        const response = await axios.get('https://ecomapi.chafaaouchaou.online//products/');
         setProducts(response.data);
         setisLoaded(false);
 
