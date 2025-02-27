@@ -4,6 +4,11 @@
 
 This is a full-stack e-commerce website built using Django and React. The backend (API) utilizes Django REST Framework for robust API development. The frontend leverages React for a dynamic and user-friendly shopping experience.
 
+
+🌐 Live demo: [https://ecom.chafaaouchaou.online/](https://ecom.chafaaouchaou.online/)
+
+
+
 **Technologies:**
 
 * **Backend:**
