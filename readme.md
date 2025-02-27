@@ -27,7 +27,7 @@ This is a full-stack e-commerce website built using Django and React. The backen
    * Navigate to the project directory: 
    * Create a virtual environment (recommended): `python -m venv venv`
    * Activate the virtual environment: `. venv/bin/activate` (Windows: `venv\Scripts\activate`)
-   * Install required dependencies: `pip install -r rqts.txt`
+   * Install required dependencies: `pip install -r ecom/rqts.txt`
    * Apply database migrations (create tables): `python manage.py makemigrations` followed by `python manage.py migrate`
    * Run the development server: `python manage.py runserver` (This will typically start the server at http://127.0.0.1:8000/)
 
