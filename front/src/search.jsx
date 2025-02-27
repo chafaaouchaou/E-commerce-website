@@ -11,7 +11,7 @@ const MyComponent = () => {
         Text: "Samsung"
       };
 
-      const response = await axios.post('https://ecomapi.chafaaouchaou.online//search/', data);
+      const response = await axios.post('https://ecomapi.chafaaouchaou.online/search/', data);
       setResponse(response.data);
       console.log(response.data); // Print the response data
     } catch (error) {

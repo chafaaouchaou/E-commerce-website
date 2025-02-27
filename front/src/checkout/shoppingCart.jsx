@@ -14,7 +14,7 @@ const ShoppingCart = () => {
 
     const fetchCartItems = async () => {
         try {
-            const response = await axios.get('https://ecomapi.chafaaouchaou.online//cart/', {
+            const response = await axios.get('https://ecomapi.chafaaouchaou.online/cart/', {
                 headers: { 'Authorization': `Token ${token}` }
             });
             setCartItems(response.data.items);
@@ -37,7 +37,7 @@ const ShoppingCart = () => {
     const updateQuantity = async (id, qty) => {
         try {
             // const item = cartItems.find(item => item.id === id);
-            await axios.put(`https://ecomapi.chafaaouchaou.online//cart-items/${id}/`, {
+            await axios.put(`https://ecomapi.chafaaouchaou.online/cart-items/${id}/`, {
                 quantity: qty
             }, {
                 headers: { 'Authorization': `Token ${token}` }
@@ -51,7 +51,7 @@ const ShoppingCart = () => {
 
     const deleteItem = async (id) => {
         try {
-            await axios.delete(`https://ecomapi.chafaaouchaou.online//cart-items/${id}/delete/`, {
+            await axios.delete(`https://ecomapi.chafaaouchaou.online/cart-items/${id}/delete/`, {
                 headers: { 'Authorization': `Token ${token}` }
             });
             const updatedItems = cartItems.filter(item => item.id !== id);
@@ -65,7 +65,7 @@ const ShoppingCart = () => {
 
     const handleCheckout = async () => {
         try {
-            const response = await axios.post('https://ecomapi.chafaaouchaou.online//stripe/', {}, {
+            const response = await axios.post('https://ecomapi.chafaaouchaou.online/stripe/', {}, {
                 headers: {
                     Authorization: `Token ${token}`
                 }

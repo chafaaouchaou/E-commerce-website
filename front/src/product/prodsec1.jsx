@@ -22,7 +22,7 @@ function Prodsec1() {
       };
       const token = localStorage.getItem('token');
       const addToCartResponse = await axios.post(
-        'https://ecomapi.chafaaouchaou.online//cart-items/',
+        'https://ecomapi.chafaaouchaou.online/cart-items/',
         cartItemData,
         {
           headers: {
@@ -46,7 +46,7 @@ function Prodsec1() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://ecomapi.chafaaouchaou.online//products/${id}/`);
+        const response = await axios.get(`https://ecomapi.chafaaouchaou.online/products/${id}/`);
         setProduct(response.data);
         setLoading(false);
       } catch (error) {

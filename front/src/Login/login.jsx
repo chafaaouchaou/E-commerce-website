@@ -18,7 +18,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://ecomapi.chafaaouchaou.online//login/', {
+      const response = await axios.post('https://ecomapi.chafaaouchaou.online/login/', {
         username: username,
         password: password
       }, {

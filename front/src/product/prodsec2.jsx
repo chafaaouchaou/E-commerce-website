@@ -12,7 +12,7 @@ const Prodsec2 = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await axios.get('https://ecomapi.chafaaouchaou.online//products/');
+        const response = await axios.get('https://ecomapi.chafaaouchaou.online/products/');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -24,7 +24,7 @@ const Prodsec2 = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get(`https://ecomapi.chafaaouchaou.online//reviews/${id}/`);
+        const response = await axios.get(`https://ecomapi.chafaaouchaou.online/reviews/${id}/`);
         setReviews(response.data);
       } catch (error) {
         console.error('Error fetching reviews:', error);
